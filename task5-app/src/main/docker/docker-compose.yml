@@ -12,7 +12,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   135026-eureka:
-    image: 135026_dockerhub_user/task5-eureka
+    image: 135026_dockerhub_user/135026-eureka
     labels:
       - "traefik.port=8761"
       - "traefik.backend=135026-eureka"
@@ -20,7 +20,7 @@ services:
     expose:
       - "8761"
     ports:
-      - "8761:8761"
+      - "17761:8761"
 
   135026-mysql:
     image: mysql
@@ -35,7 +35,7 @@ services:
       - "traefik.enable=false"
 
   135026-app:
-    image: 135026_dockerhub_user/task5-app
+    image: 135026_dockerhub_user/theatre-app
     labels:
       - "traefik.port=8080"
       - "traefik.backend=135026-app"
