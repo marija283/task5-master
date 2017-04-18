@@ -15,8 +15,8 @@ services:
     image: 135026_dockerhub_user/task5-eureka
     labels:
       - "traefik.port=8761"
-      - "traefik.backend=my-eureka"
-      - "traefik.frontend.rule=Host:my-eureka.dck.mojserver.mk"
+      - "traefik.backend=135026-eureka"
+      - "traefik.frontend.rule=Host:135026-eureka.dck.mojserver.mk"
     expose:
       - "8761"
     ports:
